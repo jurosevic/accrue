@@ -1,5 +1,63 @@
-| Issue | What was expected | Type | Severity |
-|-------|-------------------|------|----------|
-| | | | |
-| | | | |
-| | | | |
+Bug report:
+
+Unable to Logout
+
+Type: Bug
+Severity: Highest
+
+1. Login with a previously registered user
+2. Go to /partners page
+3. Click on the ‘more actions’ icon in the header right corner
+4. Click on the Logout button
+5. Notice that the user is not logged out
+
+Incorrect Savings Plan amount
+
+Type: Bug
+Severity: Medium
+
+1. Go to /partners page
+2. In the “Search for Merchant” input field type JetBlue
+3. Set your savings amount to 200$
+4. Notice that we have $210 as “Your savings plan”,  instead of $20
+
+Invalid DOB on Personal Information page
+
+Type: Bug
+Severity: Major
+
+For some reason, this date was not accepted - 04/17/1984
+While 11/11/1984 was valid
+
+Received error 500 when I wanted to confirm the savings plan
+
+Type: Bug
+Severity: Highest
+
+curl 'https://api-development.accruesavings.com/api/v1/bank/unit-customer-token/verification' \
+  -H 'authority: api-development.accruesavings.com' \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZJeGlpeGJMUk1NRkZjZFRrN1F3MCJ9.eyJodHRwczovL2FjY3J1ZXNhdmluZ3MuY29tL3JvbGVzIjpbImFjY3J1ZS11c2VyIl0sImh0dHBzOi8vYWNjcnVlc2F2aW5ncy5jb20vZW1haWwiOiJib29tYmFtbGFzdG9uZUBtYWlsaW5hdG9yLmNvbSIsImh0dHBzOi8vYWNjcnVlc2F2aW5ncy5jb20vYXBwX21ldGFkYXRhIjp7fSwiaHR0cHM6Ly9hY2NydWVzYXZpbmdzLmNvbS91c2VyX21ldGFkYXRhIjp7fSwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRldmVsb3BtZW50LmFjY3J1ZXNhdmluZ3MuY29tLyIsInN1YiI6ImF1dGgwfDYzMzU1YWY0MzhkNDg1NzU5Njc3ODc3YyIsImF1ZCI6WyJodHRwczovL2FwaS1kZXZlbG9wbWVudC5hY2NydWUtdGVjaG5vbG9neS5jb20vYXBpIiwiaHR0cHM6Ly9hY2NydWUtZGV2ZWxvcG1lbnQudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY2NDQ0MTA4MCwiZXhwIjoxNjY0NDQ4MjgwLCJhenAiOiJkeUh2RHNMNnVrZEJTQlB2M1ptYkNITmVVSnI0Q2VFRCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJyZWFkOmNhbXBhaWducyIsInJlYWQ6bWVyY2hhbnRzIiwicmVhZDpwcm9kdWN0LWNvbGxlY3Rpb25zIiwicmVhZDpwcm9kdWN0cyIsInJlYWQ6cHJvZHVjdC12YXJpYW50cyJdfQ.NhoSJnUMK1ftqSTsjNnVgFU5JVi5WFp2byh_IfuVic27L4KFicSe8ul_RBUEQCX7Y-vWaYYiKA4PucmOMqH1458NDZzNJI014T1AWJf8vDavqm6JPaiUGUN0Do2OgTHcmgxEC-k5gDwmmmxSSu_MwErY6I95IRbg8bcV2RAH0gD2_zCZVd0jPUKCIyw8i7hQwSjbCz22YGysXJxozqU_FgFN4Sjb8_npuraNLBf-EnCr6C-0cG5pLGTEGT58WebZ02fh4qone4gmBU3N4R6EgOvcj1b4khDlazd45Qbj1a2Inc63Zp9j0haBRIuAksP5a5W8msJLJiTWcP961y_gNw' \
+  -H 'cookie: _gcl_au=1.1.851240998.1664181277; _ga=GA1.1.464544352.1664181277; _tt_enable_cookie=1; _ttp=05f00dd8-f832-44b6-9658-f7912206ac8a; _hjSessionUser_2771111=eyJpZCI6IjhkMDI0MzA3LTU4NjAtNTEzMC04MGM2LWI4ZTdjMDI5NzE0NiIsImNyZWF0ZWQiOjE2NjQxODEyNzc0NTUsImV4aXN0aW5nIjp0cnVlfQ==; _hjSessionUser_3062660=eyJpZCI6IjMzMGMwOWU5LTAxNDUtNWYyOC1hZTA5LTg4ZDM5MWIyOWI3YiIsImNyZWF0ZWQiOjE2NjQ0Mzg0OTc2NzgsImV4aXN0aW5nIjp0cnVlfQ==; intercom-id-xwrjlepo=7b40774b-2f11-42be-9eff-0bb7c7d7004c; intercom-session-xwrjlepo=; _hjSession_2771111=eyJpZCI6ImNhZTI2NjJkLTU3Y2MtNDZjYy1iZjY1LTRkMGRhOTQwYzNlNSIsImNyZWF0ZWQiOjE2NjQ0NDA4MTYzMDYsImluU2FtcGxlIjp0cnVlfQ==; _hjAbsoluteSessionInProgress=0; _hjSession_3062660=eyJpZCI6IjYxOGUwMTZkLWYyN2UtNGQ4Mi05ODc0LWFmNTkwNTlhZWQxOSIsImNyZWF0ZWQiOjE2NjQ0NDA5MDc2NDUsImluU2FtcGxlIjp0cnVlfQ==; _ga_D6EF8L8WNL=GS1.1.1664440815.5.1.1664441039.0.0.0' \
+  -H 'origin: https://qa-vj-09-22.tmp.accruesavings.com' \
+  -H 'referer: https://qa-vj-09-22.tmp.accruesavings.com/' \
+  -H 'sec-ch-ua: "Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36' \
+  --compressed
+
+Selecting address by keyboard doesn’t close dropdown
+
+Type: Bug
+Severity: Minor
+
+1. Go to /kyc?type=savings-plan page, “Your Information” section
+2. Type address in the address input field
+3. Dropdown with suggested addresses will appear
+4. Click the arrow down on a keyboard and after that click enter button
+5. The address will be selected, but the dropdown is still open
