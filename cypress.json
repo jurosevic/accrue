@@ -1,3 +1,4 @@
 {
-  "baseUrl": "https://qa-vj-09-22.tmp.accruesavings.com/"
+  "baseUrl": "https://qa-vj-09-22.tmp.accruesavings.com/",
+  "watchForFileChanges": false
 }
