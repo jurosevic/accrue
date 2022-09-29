@@ -61,11 +61,5 @@ describe('Test Accrue App', () => {
         cy.contains('Plaid Saving').click();
         cy.contains('Continue').click();
         cy.contains('Continue', {timeout: 30000}).click();
-
-
-        // cy.get(Locators.setSavingsAmountInput).should('have.value', '200');
-        // cy.contains('Confirm savings goal').click();
-        //
-        // cy.get(Locators.dashboardBanner).should('have.text', 'Set up your wallet');
     })
 })
